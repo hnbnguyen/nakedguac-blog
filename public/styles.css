@@ -90,3 +90,20 @@ textarea {
 .blogs a:hover h3{
     color: var(--naked-yellow);
 }
+/* detail style */
+.details {
+    position: relative;
+}
+
+.delete{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.delete:hover{
+    cursor: pointer;
+    color: var(--naked-yellow);
+}

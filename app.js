@@ -89,6 +89,18 @@ app.get('/blogs/:id', (req, res) => {
     });
 });
 
+app.delete('/blogs/:id', (req, res) => {
+    const id = req.params.id;
+
+    Blog.findByIdAndDelete(id)
+        .then((result) => {
+            res.json({ redirect: '/blogs' })
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+});
+
 // mongoose and mongo sandbox routes
 app.get('/add-blog', (req, res) => {
     const blog = new Blog({
@@ -125,8 +137,6 @@ app.get('/single-blog', (req, res) => {
             console.log(err);
         });
 })
-
-
 
 //404 page
 app.use((req, res) => {
