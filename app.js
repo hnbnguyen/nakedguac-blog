@@ -72,6 +72,23 @@ app.post('/blogs', (req, res) => {
         });
 });
 
+app.get('/blogs/create', (req, res) => {
+    // res.send('<p> about me </p>');
+    res.render('create', {title: 'Create'});
+});
+
+app.get('/blogs/:id', (req, res) => {
+    const id = req.params.id;
+    console.log(id);
+    Blog.findById(id)
+    .then((result) => {
+        res.render('details', {blog: result, title: 'Blog detail'});
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+});
+
 // mongoose and mongo sandbox routes
 app.get('/add-blog', (req, res) => {
     const blog = new Blog({
@@ -109,10 +126,7 @@ app.get('/single-blog', (req, res) => {
         });
 })
 
-app.get('/blogs/create', (req, res) => {
-    // res.send('<p> about me </p>');
-    res.render('create', {title: 'Create'});
-});
+
 
 //404 page
 app.use((req, res) => {

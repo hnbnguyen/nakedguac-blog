@@ -4,7 +4,7 @@
 
     <body>
         <h1>homepage</h1>
-        <h2>my photography portfolio is the only thing i care about right now</h2>
+        <h2>a nakedguac blogs made to document my ultralearning challenge</h2>
         
         <%- include('./partials/nav.ejs') %> 
 
@@ -13,10 +13,11 @@
 
             <% if (blogs.length > 0) {%>
                 <% blogs.forEach(blog => { %>
-                    
-                    <h3 class="title"><%= blog.title%> </h3>
-                    <p class="snippet"><%= blog.snippet %> </p>
-
+                    <!-- anchor tag with a dynamic variable -->
+                    <a class="single" href="/blogs/<%= blog._id %>">
+                        <h3 class="title"><%= blog.title%> </h3>
+                        <p class="snippet"><%= blog.snippet %> </p>
+                    </a>
                 <% }) %>
             <% } else { %>
                 <p>There are no blog to display...</p>
