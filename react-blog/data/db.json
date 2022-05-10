@@ -1,22 +1,22 @@
 {
-    "blogs": [
-        {
-            "title": "making blog with react",
-            "body": "it is friday today and im going to sell my camera after this",
-            "author":"meem",
-            "id":1
-        },
-        {
-            "title": "going to the gym this afternoon",
-            "body":"probably going to work out my legs again today",
-            "author":"nakedguac", 
-            "id":2
-        },
-        {
-            "title": "finishing up my photography portfolio",
-            "body": "i will launch it this sunday, lots of work along that way but exciting indeed", 
-            "author":"meem", 
-            "id":3
-        } 
-    ]
+  "blogs": [
+    {
+      "title": "making blog with react",
+      "body": "it is friday today and im going to sell my camera after this",
+      "author": "meem",
+      "id": 1
+    },
+    {
+      "title": "going to the gym this afternoon",
+      "body": "probably going to work out my legs again today",
+      "author": "nakedguac",
+      "id": 2
+    },
+    {
+      "title": "finishing up my photography portfolio",
+      "body": "i will launch it this sunday, lots of work along that way but exciting indeed",
+      "author": "meem",
+      "id": 3
+    }
+  ]
 }
